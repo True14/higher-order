@@ -20,11 +20,27 @@ function addSteps(arr) {
   return result;
 }
 
-function logSteps(arr){
+function logSteps(arr) {
+  if(arr[0] < 0 && arr[1] < 0){
+    console.log(`The turtle took ${-arr[0]} step(s) back and ${-arr[1]} step(s) to the right`)
+  }
 
+  else if(arr[0] < 0){
+    console.log(`The turtle took ${-arr[0]} step(s) back and ${arr[1]} step(s) to the left`)
+  }
+
+  else if (arr[1] < 0) {
+    console.log(`The turtle took ${arr[0]} step(s) forward and ${-arr[1]} step(s) to the right`)
+  }
+
+  else {
+    console.log(`The turtle took ${arr[0]} step(s) forward and ${arr[1]} step(s) to the left`)
+  }
 }
 
 let filtered = myArray.filter(test);
 let mappedArray = myArray.map(addSteps)
+let feArray = myArray.forEach(logSteps);
+
 console.log(filtered);
 console.log(mappedArray);
