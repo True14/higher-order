@@ -1,3 +1,4 @@
+//Higher order functions
 function hazardWarningCreator(typeOfWarning){
   let warningCounter = 0;
   return function(location){

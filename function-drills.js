@@ -1,3 +1,4 @@
+//Functions as arguments (1)
 function repeat(fn, n){
   for(var i = 0; i < n; i++){
     fn();
